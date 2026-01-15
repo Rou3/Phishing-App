@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      volumes:
+        - name: html-volume
+          emptyDir: {}
+      initContainers:
+        - name: init-copy
+          image: rabdelrahman3332/phishing-frontend
+          command: ["sh", "-c", "cp /html/index.html /shared"]
+          volumeMounts:
+            - name: html-volume
+              mountPath: /shared
+      containers:
+        - name: nginx
+          image: nginx
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html
+
