@@ -182,13 +182,11 @@ SELECT * FROM creds;
 
 ## 👤 Author
 
-**Rawan Osama**
+**Rawan**
 
 ---
 
 ## 📜 License
 
 This project is for **educational use only**.
-# test
-# test
-# test
+
