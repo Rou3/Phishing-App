@@ -22,10 +22,10 @@ jobs:
 
     - name: Build & Push Frontend Image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/phishing-frontend ./frontend
-        docker push ${{ secrets.DOCKER_USERNAME }}/phishing-frontend
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/phishing-frontend ./frontend
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/phishing-frontend
 
     - name: Build & Push Backend Image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/phishing-backend ./backend
-        docker push ${{ secrets.DOCKER_USERNAME }}/phishing-backend
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/phishing-backend ./backend
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/phishing-backend
