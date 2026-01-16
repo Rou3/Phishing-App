@@ -173,6 +173,7 @@ SELECT * FROM creds;
 
 
 ---
+![CI](https://github.com/Rou3/Phishing-App/actions/workflows/docker-ci.yml/badge.svg)
 
 ## 👤 Author
 
