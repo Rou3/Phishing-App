@@ -173,6 +173,11 @@ SELECT * FROM creds;
 
 
 ---
+### CI/CD
+- CI implemented using GitHub Actions to build and push Docker images.
+- CD implemented using Argo CD following GitOps principles.
+
+---
 
 
 ## 👤 Author
